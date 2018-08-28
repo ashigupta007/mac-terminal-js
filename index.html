@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title>Ashish - Frontend Dev</title>
+
+	<meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1, minimum-scale=1">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <meta name="keywords" content="Ashish, Gupta, Ashish Gupta, Profile, UI/UX Designer, Developer, UX developer, Ux developer in Delhi, Full Stack Developer, Web Developer, Website Developer, Ux Profile, Ux Developer Resume">
+</head>
+
+<body>
+
+	<div class="maincont" id="maincont">
+		<div class="terminal-cont" onclick="document.getElementById('input').focus();">
+			<div class="header">
+				<ul>
+					<li style="background-color:#E36666"></li>
+					<li style="background-color:#FFBE20 "></li>
+					<li style="background-color:#25D047"></li>
+				</ul>
+
+				<div style="display: inline-block;margin-top: 5px;">bash ~ System @@ WeLp</div>
+			</div>
+			<div class="terminal">
+				<div class="terminal-content" id="terminal-cont">
+					System@WeLp ~: guest$ 
+					<span class="typed" id="typed"></span><br>
+					<span id="portfolio"></span>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+</body>
+	
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+	<script type="text/javascript" src="js/app.js"></script>
+	
+	<script type="text/javascript" src="js/typed.js"></script>
+
+	<link href="https://fonts.googleapis.com/css?family=Crimson+Text|Josefin+Sans|Source+Sans+Pro" rel="stylesheet">
+
+	<script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+
+	<script type="text/javascript">
+		$( document ).ready(function() {
+		var typed = new Typed('#typed',{
+	    strings:['sudo ^500 WeLp'],
+	    typeSpeed: 50,
+	    showCursor: false,
+
+		});
+
+		var typed2 = new Typed('#portfolio',{
+	    strings:['<h1>WeLp</h1><p class="subhead">Online Bash Serving You</p>'],
+	    typeSpeed: 10,
+	    showCursor:false,
+	    startDelay:3000,
+	    onComplete: function onComplete(self) {
+	   	var terminal_cont= document.getElementById('terminal-cont');
+		var new_line='System@WeLp ~: guest$ <input type="text" class="terminal_input" onkeyup="input_process()" id="input" spellcheck="false">';
+		sleep(1000);
+		terminal_cont.innerHTML += new_line;
+		document.getElementById('input').focus();
+	    },
+
+		});
+	});
+
+	function sleep(milliseconds) {
+		  var start = new Date().getTime();
+		  for (var i = 0; i < 1e7; i++) {
+		    if ((new Date().getTime() - start) > milliseconds){
+		      break;
+		    }
+		  }
+		}
+	</script>
+</html>
